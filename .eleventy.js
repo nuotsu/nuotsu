@@ -1,3 +1,5 @@
+let dev = process.env.MODE === 'dev';
+
 module.exports = eleventyConfig => {
   eleventyConfig.setQuietMode(true);
 
@@ -5,8 +7,11 @@ module.exports = eleventyConfig => {
     htmlTemplateEngine: 'njk',
 
     dir: {
-      output:   '__dev__',
+      output: dev
+        ? '__dev__'
+        : 'dist',
       input:    'src/pages',
+      includes: '../includes',
     }
   }
 }

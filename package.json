@@ -7,9 +7,10 @@
   "private": true,
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --watch"
+    "dev": "MODE=dev eleventy --watch --serve"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "^0.11.1",
+    "dotenv": "^8.2.0"
   }
 }
