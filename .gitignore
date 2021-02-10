@@ -1,4 +1,5 @@
 node_modules/
 
 __dev__/
+__build__/
 dist/

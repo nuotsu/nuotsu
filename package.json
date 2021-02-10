@@ -6,11 +6,23 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "eleventy",
-    "dev": "MODE=dev eleventy --watch --serve"
+    "build": "run-s build:*",
+    "build:postcss": "postcss src/styles/*.css -d __build__/styles",
+    "build:11ty": "eleventy",
+    "dev": "run-p dev:*",
+    "dev:postcss": "MODE=dev postcss src/styles/*.css -d __dev__/styles -w",
+    "dev:11ty": "MODE=dev eleventy --watch --serve"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "dotenv": "^8.2.0"
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.5",
+    "postcss-cli": "^8.3.1",
+    "postcss-custom-media": "^8.0.0",
+    "postcss-import": "^14.0.0",
+    "postcss-nested": "^5.0.3",
+    "postcss-preset-env": "^6.7.0"
   }
 }
