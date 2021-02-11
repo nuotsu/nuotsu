@@ -1,4 +1,5 @@
 node_modules/
+.vscode/
 
 __dev__/
 __build__/

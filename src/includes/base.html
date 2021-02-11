@@ -7,11 +7,15 @@
 
   <title>{{ title }}</title>
 
-  <link rel="stylesheet" href="/styles/base.css">
+  {% block head %}
+    <link rel="stylesheet" href="/styles/base.css">
+  {% endblock %}
 </head>
 
 <body>
   {% block content %}{% endblock %}
+
+  {% block scripts %}{% endblock %}
 </body>
 
 </html>

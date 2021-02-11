@@ -14,7 +14,7 @@ module.exports = {
 
     require('postcss-preset-env')({
       features: {
-        // 'custom-properties': false
+        'custom-properties': false
       }
     }),
 

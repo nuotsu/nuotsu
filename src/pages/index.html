@@ -1,8 +1,15 @@
 ---
-title: Mitchell Kazumaru Christ
 ---
 {% extends 'base.html' %}
 
+{% block head %}
+  <link rel="stylesheet" href="/styles/index.css">
+{% endblock %}
+
+{% block scripts %}
+  <script src="/scripts/index.js" type="module"></script>
+{% endblock %}
+
 {% block content %}
-<h1>nuotsu</h1>
+<div id="app"></div>
 {% endblock %}

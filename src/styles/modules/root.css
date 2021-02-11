@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+:root {
+  --hue: 255;
+
+  --accent: hsl(var(--hue), 100%, 50%);
+
+  --bg:         hsl(var(--hue), 100%, 2%);
+  --bg-invert:  hsl(0, 0%, 100%);
+
+  --text:         var(--bg-invert);
+  --text-invert:  var(--bg);
+
+  --font-title: 'Abril Fatface', serif;
+}
