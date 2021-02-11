@@ -32,7 +32,7 @@ function handleOrientation(event) {
   </div>
 </div>
 
-<style>
+<style lang="postcss">
 .perspective {
   perspective: 200;
   text-align: center;
