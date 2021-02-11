@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "NODE_ENV=production snowpack build",
+    "build": "snowpack build",
     "dev": "snowpack dev"
   },
   "dependencies": {

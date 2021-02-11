@@ -1,4 +1,4 @@
 [build]
   base = '.'
-  publish = 'dist'
+  publish = '__dist__'
   command = 'yarn build'
