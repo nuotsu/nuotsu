@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "build": "snowpack build",
-    "dev": "snowpack dev"
+    "dev": "MODE=dev snowpack dev"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",

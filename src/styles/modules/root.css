@@ -5,11 +5,13 @@
 
   --accent: hsl(var(--hue), 100%, 50%);
 
-  --bg:         hsl(var(--hue), 100%, 2%);
+  --bg:         hsl(var(--hue), 100%, 0%);
   --bg-invert:  hsl(0, 0%, 100%);
 
   --text:         var(--bg-invert);
   --text-invert:  var(--bg);
 
   --font-title: 'Abril Fatface', serif;
+
+  --t: 0.2s ease-in-out;
 }

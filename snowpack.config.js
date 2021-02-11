@@ -24,8 +24,8 @@ module.exports = {
     !dev
       ? '@snowpack/plugin-postcss'
       : ['@snowpack/plugin-run-script', {
-        cmd:    'postcss src/styles/*.css -d __dist__/styles/',
-        watch:  'postcss src/styles/*.css -d __dev__/styles/ -w'
+        cmd: '',
+        watch: 'postcss src/styles/*.css -d __dev__/styles/ -w'
       }],
 
     '@snowpack/plugin-svelte',

@@ -1,7 +1,9 @@
 module.exports = eleventyConfig => {
   eleventyConfig.setQuietMode(true);
 
-  eleventyConfig.addWatchTarget('src/styles');
+  eleventyConfig.addPassthroughCopy({
+    // 'src/styles'
+  });
 
   return {
     htmlTemplateEngine: 'njk',

@@ -1,5 +1,5 @@
-import GyroLogo from '../components/GyroLogo.svelte';
+import Nuotsu from '../components/Nuotsu.svelte';
 
-new GyroLogo({
-  target: document.querySelector('#app')
+new Nuotsu({
+  target: document.querySelector('#nuotsu')
 });
