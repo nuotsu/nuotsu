@@ -26,6 +26,7 @@ function handleOrientation(event) {
     style="
       --beta:   {orientation.beta || 0}deg;
       --gamma:  {orientation.gamma || 0};
+      --angle:  {-orientation.alpha || 0}deg;
     "
   >
     <slot></slot>

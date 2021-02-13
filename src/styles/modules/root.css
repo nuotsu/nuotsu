@@ -1,10 +1,9 @@
 :root {
-  --hue: 255;
-
-  --accent: hsl(var(--hue), 100%, 50%);
+  --accent:       hsl(240, 100%, 40%);
+  --accent-light: hsl(240, 100%, 90%);
 
   --bg:         hsl(0, 0%, 100%);
-  --bg-invert:  hsl(0, 100%, 0%);
+  --bg-invert:  hsl(0, 0%, 10%);
 
   --text:         var(--bg-invert);
   --text-invert:  var(--bg);
@@ -12,7 +11,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:         hsl(0, 100%, 0%);
+    --bg:         hsl(0, 0%, 7%);
     --bg-invert:  hsl(0, 0%, 100%);
   }
 }

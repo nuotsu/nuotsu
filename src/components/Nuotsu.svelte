@@ -4,5 +4,5 @@ import Fonts from './Fonts.svelte';
 </script>
 
 <Gyro>
-  <Fonts text="nuotsu" size="4rem" />
+  <Fonts text="nuotsu" size="5rem" />
 </Gyro>

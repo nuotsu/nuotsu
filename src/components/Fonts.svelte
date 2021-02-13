@@ -26,13 +26,17 @@ let random = () => Math.floor(Math.random() * fonts.length);
   <link rel="stylesheet" href="//fonts.googleapis.com/css2?{families}&display=swap&text={text}">
 </svelte:head>
 
-<div style="font-size: {size};">
+<div class="text-gradient" style="font-size: {size};">
   {#each text as char}
     <span style="font-family: {fonts[random()]};">{char}</span>
   {/each}
 </div>
 
 <style>
+div {
+  display: inline-block;
+}
+
 ::selection {
   background-color: transparent;
   color: var(--accent);
