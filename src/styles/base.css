@@ -1,7 +1,7 @@
-@import './modules/reset.css';
-/* @import './modules/fonts.css'; */
-@import './modules/root.css';
-@import './modules/utils.css';
+@import 'modules/reset.css';
+/* @import 'modules/fonts.css'; */
+@import 'modules/root.css';
+@import 'modules/utils.css';
 
 body {
   background-color: var(--bg);
