@@ -25,6 +25,7 @@ function handleOrientation(event) {
   class="perspective"
   on:click={handleClick}
   style="
+    --hoko: {enabled ? orientation.alpha : 0};
     --zengo:      {enabled ? orientation.beta : 0};
     --zengo-abs:  {enabled ? Math.abs(orientation.beta - 30) : 0};
     --sayu:       {enabled ? orientation.gamma : 0};
@@ -33,7 +34,6 @@ function handleOrientation(event) {
       ? orientation.gamma * (orientation.beta > 30 ? 1 : -1)
       : 0
     };
-    --hoko: {enabled ? orientation.alpha : 0};
   "
 >
   <div class="gyro" class:enabled>
@@ -68,11 +68,18 @@ function handleOrientation(event) {
       0,
       calc(var(--zengo) * 1deg - 30deg)
     );
+
+    --dir: calc(var(--hoko) * -1deg);
   }
 }
 
 span {
   grid-area: content;
+
+  &:not(.shadow) {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .shadow {
@@ -85,6 +92,6 @@ span {
 
   transform: translate(var(--tX, 0), var(--tY, 0));
   filter: blur(var(--blur, 0));
-  opacity: 0.2;
+  opacity: 0.25;
 }
 </style>
