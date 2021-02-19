@@ -3,5 +3,4 @@ node_modules/
 .netlify/
 
 __dev__/
-__build__/
 __dist__/

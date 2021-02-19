@@ -1,10 +1,6 @@
 module.exports = eleventyConfig => {
   eleventyConfig.setQuietMode(true);
 
-  eleventyConfig.addPassthroughCopy({
-    // 'src/styles'
-  });
-
   return {
     htmlTemplateEngine: 'njk',
 

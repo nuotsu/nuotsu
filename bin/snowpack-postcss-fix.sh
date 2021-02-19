@@ -1,6 +1,6 @@
 if ls src/styles/base.css
 then
-  mv src/styles/{base,index}.css .vscode/
+  mv src/styles/ .vscode/
 else
-  mv .vscode/{base,index}.css src/styles/
+  mv .vscode/styles src/
 fi

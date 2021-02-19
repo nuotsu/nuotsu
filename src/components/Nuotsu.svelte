@@ -1,8 +1,13 @@
 <script>
 import Gyro from './Gyro.svelte';
-import Fonts from './Fonts.svelte';
 </script>
 
 <Gyro>
-  <Fonts text="nuotsu" size="5rem" />
+  <div class="nuotsu">nuotsu</div>
 </Gyro>
+
+<style>
+.nuotsu {
+  font-size: 5rem;
+}
+</style>

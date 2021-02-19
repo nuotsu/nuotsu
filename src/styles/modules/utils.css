@@ -1,5 +1,0 @@
-.text-gradient {
-  background: linear-gradient(var(--angle, to bottom), var(--accent), var(--accent-light));
-  background-clip: text;
-  color: transparent;
-}

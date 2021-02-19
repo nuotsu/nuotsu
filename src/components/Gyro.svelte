@@ -21,30 +21,70 @@ function handleOrientation(event) {
 }
 </script>
 
-<div class="perspective" on:click={handleClick}>
-  <div class:transform={enabled}
-    style="
-      --beta:   {orientation.beta || 0}deg;
-      --gamma:  {orientation.gamma || 0};
-      --angle:  {-orientation.alpha || 0}deg;
-    "
-  >
-    <slot></slot>
+<div
+  class="perspective"
+  on:click={handleClick}
+  style="
+    --zengo:      {enabled ? orientation.beta : 0};
+    --zengo-abs:  {enabled ? Math.abs(orientation.beta - 30) : 0};
+    --sayu:       {enabled ? orientation.gamma : 0};
+    --sayu-abs:   {enabled ? Math.abs(orientation.gamma) : 0};
+    --sayu-3d:    {enabled
+      ? orientation.gamma * (orientation.beta > 30 ? 1 : -1)
+      : 0
+    };
+    --hoko: {enabled ? orientation.alpha : 0};
+  "
+>
+  <div class="gyro" class:enabled>
+    <span>
+      <slot></slot>
+    </span>
+
+    {#if enabled}
+      <span class="shadow">
+        <slot></slot>
+      </span>
+    {/if}
   </div>
 </div>
 
 <style lang="postcss">
 .perspective {
   perspective: 200;
-  text-align: center;
 }
 
-.transform {
-  transform: rotate3d(
-    1,
-    calc(var(--gamma) / 15),
-    0,
-    calc(-60deg + var(--beta))
+.gyro {
+  display: grid;
+  grid-template-areas: content;
+  place-content: center;
+  max-width: max-content;
+  margin-inline: auto;
+
+  &.enabled {
+    transform: rotate3d(
+      1,
+      calc(var(--sayu-3d) * -0.05),
+      0,
+      calc(var(--zengo) * 1deg - 30deg)
+    );
+  }
+}
+
+span {
+  grid-area: content;
+}
+
+.shadow {
+  --tX: calc(var(--sayu) * 0.75px);
+  --tY: calc(var(--zengo) * 0.75px - 22px);
+  --blur: max(
+    calc(var(--zengo-abs) * 0.075px - 0.5px),
+    calc(var(--sayu-abs) * 0.075px - 0.5px)
   );
+
+  transform: translate(var(--tX, 0), var(--tY, 0));
+  filter: blur(var(--blur, 0));
+  opacity: 0.2;
 }
 </style>
