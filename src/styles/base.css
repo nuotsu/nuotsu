@@ -1,9 +1,10 @@
 @import 'modules/reset.css';
-/* @import 'modules/fonts.css'; */
+@import 'modules/fonts.css';
 @import 'modules/root.css';
 @import 'modules/utils.css';
 
 body {
   background-color: var(--bg);
   color: var(--text);
+  font-family: var(--font);
 }

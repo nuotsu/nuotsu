@@ -85,13 +85,12 @@ span {
 .shadow {
   --tX: calc(var(--sayu) * 0.75px);
   --tY: calc(var(--zengo) * 0.75px - 22px);
-  --blur: max(
-    calc(var(--zengo-abs) * 0.075px - 0.5px),
-    calc(var(--sayu-abs) * 0.075px - 0.5px)
-  );
 
   transform: translate(var(--tX, 0), var(--tY, 0));
-  filter: blur(var(--blur, 0));
-  opacity: 0.25;
+  opacity: 0.12;
+
+  @media (prefers-color-scheme: dark) {
+    opacity: 0.2;
+  }
 }
 </style>

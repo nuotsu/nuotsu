@@ -4,6 +4,8 @@
 
   --text:         var(--bg-invert);
   --text-invert:  var(--bg);
+
+  --font: 'Abril Fatface', monospace;
 }
 
 @media (prefers-color-scheme: dark) {
